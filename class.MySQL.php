@@ -317,6 +317,11 @@ class MySQL {
 			mysql_close($this->databaseLink);
 		}
 	}
+	
+	//by changchengdecao 2013-08-05
+	function __destruct(){
+		$this->CloseConnection();
+	}
 }
 
 ?>
